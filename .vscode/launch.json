@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ChinaEstoreApplication<ChinaEstore>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.projeto.ChinaEstore.ChinaEstoreApplication",
+            "projectName": "ChinaEstore",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
