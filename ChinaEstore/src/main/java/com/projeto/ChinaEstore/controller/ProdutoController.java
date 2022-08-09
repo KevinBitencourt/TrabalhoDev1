@@ -39,9 +39,9 @@ public class ProdutoController {
 
     @RequestMapping(path="/produtos/delete/{Id}", method = RequestMethod.DELETE)
     @ResponseBody
-    public void deletarProdutoPorId(@PathVariable ("Id")Long id){
+    public String deletarProdutoPorId(@PathVariable ("Id")Long id){
                produtoRepository.deleteById(id);
-        
+        return "Produto Deletado";
     }
 
     @RequestMapping(path="/produto/lista/{Id}", method = RequestMethod.GET)

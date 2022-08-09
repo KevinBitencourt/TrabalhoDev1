@@ -1,7 +1,6 @@
 package com.projeto.ChinaEstore.entidade;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,7 +27,7 @@ public class Produto {
     private Long id;
     @ManyToOne
     private Cliente cliente;
-    @ManyToMany(cascade = CascadeType.ALL)
-    private List<Venda> vendas;
+    @ManyToMany
+    private List<Venda> venda;
 }
   

@@ -26,5 +26,5 @@ public class Conta {
     private String numero;
     private String saldo;
     @OneToMany
-    private List<Produto> produto;
+    private List<Venda> venda;
 }

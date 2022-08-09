@@ -38,9 +38,9 @@ public class ClienteController {
     }
     @RequestMapping(path="/cliente/delete/{Id}", method = RequestMethod.DELETE)
     @ResponseBody
-    public void deletarClientePorId(@PathVariable ("Id")Long id){
+    public String deletarClientePorId(@PathVariable ("Id")Long id){
         clienteRepository.deleteById(id);
-        
+        return "Cliente Deletado";
     }
 
     @RequestMapping(path="/cliente/lista/{Id}", method = RequestMethod.GET)
