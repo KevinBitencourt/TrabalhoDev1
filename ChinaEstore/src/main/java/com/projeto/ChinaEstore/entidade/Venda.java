@@ -22,10 +22,11 @@ public class Venda {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+    private String total;
+    private String venda;
     @ManyToMany
     private List<Produto> produto;
     @ManyToOne
-    private Conta conta; 
-    private String total;
+    private Cliente cliente; 
+    
 }

@@ -8,25 +8,46 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.projeto.ChinaEstore.entidade.Cliente;
+import com.projeto.ChinaEstore.entidade.Produto;
 import com.projeto.ChinaEstore.entidade.Venda;
+import com.projeto.ChinaEstore.repository.ClienteRepository;
+import com.projeto.ChinaEstore.repository.ProdutoRepository;
 import com.projeto.ChinaEstore.repository.VendaRepository;
 
 @Controller
 public class VendaController {
+    @Autowired
+    private ClienteController ct;
+    @Autowired
+    private ProdutoController obj;
+
    @Autowired
    private VendaRepository vendaRepository;
-   @PostMapping("/vendas")
+   private ClienteRepository clienteRepository;
+   private ProdutoRepository produtoRepository;
+   /*@GetMapping("/venda/{id1}/{id2}")
    @ResponseBody
-   public Venda salvarVenda(@RequestBody Venda venda){
-     vendaRepository.save(venda);
-       return venda;
-   }
+   public String salvar(@PathVariable("id1")Long id1, @PathVariable("id2")Long id2){
+
+    Produto pdt;
+    Optional<Produto> produto ; //= new Produto();
+    Optional<Cliente> cliente; //= new Cliente();
+    Venda venda = new Venda();
+    
+    cliente = ct.listaClientePorId(id1);
+    produto = obj.listaProdutoPorId(id2);
+
+    //pdt = produto;
+   // venda.setVenda(cliente);
+    //venda.setVenda(produto);
+    return +this.cliente+  +this.produto+;
+    } */
+
    @GetMapping("/vendas/lista")
    @ResponseBody
    public List<Venda> listarVendas(){

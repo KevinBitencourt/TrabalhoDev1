@@ -46,7 +46,7 @@ public class ProdutoController {
 
     @RequestMapping(path="/produto/lista/{Id}", method = RequestMethod.GET)
     @ResponseBody
-    public Optional<Produto> listaClientePorId(@PathVariable ("Id")Long id){
+    public Optional<Produto> listaProdutoPorId(@PathVariable ("Id")Long id){
        Optional<Produto> obj = produtoRepository.findById(id);
         return obj;
     }
