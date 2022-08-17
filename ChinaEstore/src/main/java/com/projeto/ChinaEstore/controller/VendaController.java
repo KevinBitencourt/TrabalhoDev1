@@ -30,22 +30,21 @@ public class VendaController {
    private VendaRepository vendaRepository;
    private ClienteRepository clienteRepository;
    private ProdutoRepository produtoRepository;
-   /*@GetMapping("/venda/{id1}/{id2}")
+   /*@RequestMapping(path="/venda/{id1}/{id2}", method = RequestMethod.GET)
    @ResponseBody
-   public String salvar(@PathVariable("id1")Long id1, @PathVariable("id2")Long id2){
-
+   public Venda salvar(@PathVariable("id1")Long id1, @PathVariable("id2")Long id2){
     Produto pdt;
-    Optional<Produto> produto ; //= new Produto();
-    Optional<Cliente> cliente; //= new Cliente();
+   
+   Optional<Produto> produto; // = new Produto();
+    Optional<Cliente> cliente;// = new Cliente();
     Venda venda = new Venda();
     
-    cliente = ct.listaClientePorId(id1);
-    produto = obj.listaProdutoPorId(id2);
-
+    cliente = clienteRepository.findById(id1);
+    produto = produtoRepository.findById(id2);
     //pdt = produto;
-   // venda.setVenda(cliente);
-    //venda.setVenda(produto);
-    return +this.cliente+  +this.produto+;
+    venda.getCliente();
+    venda.getProduto();
+    return venda;
     } */
 
    @GetMapping("/vendas/lista")

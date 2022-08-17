@@ -27,6 +27,6 @@ public class Venda {
     @ManyToMany
     private List<Produto> produto;
     @ManyToOne
-    private Cliente cliente; 
+    private Cliente cliente;
     
 }

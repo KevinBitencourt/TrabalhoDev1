@@ -31,5 +31,5 @@ public class Cliente {
     @OneToOne(cascade = CascadeType.ALL)
     private Conta conta;
     @OneToMany(cascade = CascadeType.ALL)
-    private List<Produto> produtos;
+    private List<Produto> produto;
 }
